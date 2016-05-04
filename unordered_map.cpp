@@ -8,11 +8,11 @@ public:
             int numberToFind = target - nums[i];
             if (hash.find(numberToFind) != hash.end()) {  //在hash表中找到numberToFind则为true，否则为false
                 result.push_back(hash[numberToFind]);
-                result.push_back(i);          //向result中加入numberToFind和i
+                result.push_back(i);                      //返回hash(numberToFind)和i
                 return result;
             }
             hash[nums[i]] = i;
-        }
+        }                                   //经过完整循环得到nums对应的hash表
     return result;
     }
 };
